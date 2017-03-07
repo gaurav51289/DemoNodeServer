@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en" ng-app="indexAngularApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Demo Node Server Title</title>
+  <!-- STYLES -->
+  <!-- build:css lib/css/main.min.css -->
+  <link rel="stylesheet" type="text/css" href="components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="components/octicons/build/octicons.min.css">
+  <link rel="stylesheet" type="text/css" href="components/rdash-ui/dist/css/rdash.css">
+  <!-- endbuild -->
+  <!-- SCRIPTS -->
+  <!-- build:js lib/js/main.min.js -->
+  <script type="text/javascript" src="components/angular/angular.js"></script>
+  <script type="text/javascript" src="components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+  <script type="text/javascript" src="components/angular-cookies/angular-cookies.min.js"></script>
+  <script type="text/javascript" src="components/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <!-- endbuild -->
+  <!-- Custom Scripts -->
+  <script type="text/javascript" src="js/angular/indexAngular.js"></script>
+</head>
+<body ng-controller="indexCtrl">
+  <div id="page-wrapper" ng-class="{'open': toggle}" ng-cloak>
+
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+      <ul class="sidebar">
+        <li class="sidebar-main">
+          <a ng-click="toggleSidebar()">
+            Demo Node
+            <span class="menu-icon glyphicon glyphicon-menu-hamburger"></span>
+          </a>
+        </li>
+        <!-- <li class="sidebar-title"><span>NAVIGATION</span></li> -->
+        <li class="sidebar-list">
+          <a href="#/home" ng-click="title='Demo Node Server'">Home<span class="menu-icon glyphicon glyphicon-time"></span></a>
+        </li>
+        <li class="sidebar-list">
+          <a href="#/demomenu1" ng-click="title='Demo Menu 1'">Menu 1<span class="menu-icon glyphicon glyphicon-time"></span></a>
+        </li>
+      </ul>
+      <!-- <div class="sidebar-footer">
+        <div class="col-md-12">
+          About
+        </div>
+      </div> -->
+    </div>
+    <!-- End Sidebar -->
+
+    <div id="content-wrapper">
+      <div class="page-content">
+
+        <!-- Header Bar -->
+        <div class="row header">
+          <div class="col-xs-12">
+            <div class="meta">
+              <div class="page">
+                <h3>{{title}}</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Header Bar -->
+
+        <!-- Main Content -->
+        <div ui-view></div>
+
+      </div><!-- End Page Content -->
+    </div><!-- End Content Wrapper -->
+  </div><!-- End Page Wrapper -->
+</body>
+</html>

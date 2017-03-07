@@ -1,0 +1,13 @@
+{
+  "name": "demonode",
+  "version": "1.0.0",
+  "description": "Demo Node server",
+  "main": "index.js",
+  "author": "Gaurav Chodwadia",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "body-parser": "1.15.0",
+    "ejs": "^2.4.1",
+    "express": "4.13.4"
+  }
+}
