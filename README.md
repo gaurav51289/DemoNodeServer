@@ -1,2 +1,2 @@
-# CloudClipboard
-Repository for Cloud Clipboard Term Project of CMPE -281
+# DemoNodeServer
+Structure for a node server with expressjs
